@@ -1,12 +1,12 @@
 <?php
 
-namespace Sasah\FilamentFabricator;
+namespace Z3d0X\FilamentFabricator;
 
 use Closure;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Pboivin\FilamentPeek\FilamentPeekPlugin;
-use Sasah\FilamentFabricator\Enums\BlockPickerStyle;
+use Z3d0X\FilamentFabricator\Enums\BlockPickerStyle;
 
 class FilamentFabricatorPlugin implements Plugin
 {

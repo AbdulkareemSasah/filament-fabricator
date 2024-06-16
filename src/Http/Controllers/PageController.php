@@ -1,11 +1,11 @@
 <?php
 
-namespace Sasah\FilamentFabricator\Http\Controllers;
+namespace Z3d0X\FilamentFabricator\Http\Controllers;
 
 use Illuminate\Support\Facades\Blade;
-use Sasah\FilamentFabricator\Facades\FilamentFabricator;
-use Sasah\FilamentFabricator\Layouts\Layout;
-use Sasah\FilamentFabricator\Models\Contracts\Page;
+use Z3d0X\FilamentFabricator\Facades\FilamentFabricator;
+use Z3d0X\FilamentFabricator\Layouts\Layout;
+use Z3d0X\FilamentFabricator\Models\Contracts\Page;
 
 class PageController
 {

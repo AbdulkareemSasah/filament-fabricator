@@ -1,10 +1,10 @@
 <?php
 
-namespace Sasah\FilamentFabricator\Resources\PageResource\Pages;
+namespace Z3d0X\FilamentFabricator\Resources\PageResource\Pages;
 
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\ListRecords;
-use Sasah\FilamentFabricator\Resources\PageResource;
+use Z3d0X\FilamentFabricator\Resources\PageResource;
 
 class ListPages extends ListRecords
 {

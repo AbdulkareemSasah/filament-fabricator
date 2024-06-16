@@ -1,6 +1,6 @@
 <?php
 
-namespace Sasah\FilamentFabricator\Models\Contracts;
+namespace Z3d0X\FilamentFabricator\Models\Contracts;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -12,8 +12,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property-read string $layout
  * @property-read array $blocks
  * @property-read int|string $parent_id
- * @property-read \Illuminate\Database\Eloquent\Collection|\Sasah\FilamentFabricator\Models\Contracts\Page[] $children
- * @property-read \Illuminate\Database\Eloquent\Collection|\Sasah\FilamentFabricator\Models\Contracts\Page[] $allChildren
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Z3d0X\FilamentFabricator\Models\Contracts\Page[] $children
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Z3d0X\FilamentFabricator\Models\Contracts\Page[] $allChildren
  * @property-read \Illuminate\Support\Carbon $created_at
  * @property-read \Illuminate\Support\Carbon $updated_at
  */

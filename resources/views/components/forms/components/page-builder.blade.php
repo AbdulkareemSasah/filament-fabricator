@@ -1,6 +1,6 @@
 @php
     use Filament\Forms\Components\Actions\Action;
-    use Sasah\FilamentFabricator\Enums\BlockPickerStyle;
+    use Z3d0X\FilamentFabricator\Enums\BlockPickerStyle;
 
     $containers = $getChildComponentContainers();
     $blockPickerBlocks = $getBlockPickerBlocks();

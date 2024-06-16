@@ -1,6 +1,6 @@
 <?php
 
-namespace Sasah\FilamentFabricator\Resources;
+namespace Z3d0X\FilamentFabricator\Resources;
 
 use Closure;
 use Filament\Forms\Components\Actions\Action as FormAction;
@@ -24,10 +24,10 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rules\Unique;
-use Sasah\FilamentFabricator\Facades\FilamentFabricator;
-use Sasah\FilamentFabricator\Forms\Components\PageBuilder;
-use Sasah\FilamentFabricator\Models\Contracts\Page as PageContract;
-use Sasah\FilamentFabricator\Resources\PageResource\Pages;
+use Z3d0X\FilamentFabricator\Facades\FilamentFabricator;
+use Z3d0X\FilamentFabricator\Forms\Components\PageBuilder;
+use Z3d0X\FilamentFabricator\Models\Contracts\Page as PageContract;
+use Z3d0X\FilamentFabricator\Resources\PageResource\Pages;
 
 class PageResource extends Resource
 {

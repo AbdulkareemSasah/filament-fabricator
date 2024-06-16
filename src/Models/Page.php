@@ -1,12 +1,12 @@
 <?php
 
-namespace Sasah\FilamentFabricator\Models;
+namespace Z3d0X\FilamentFabricator\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Cache;
-use Sasah\FilamentFabricator\Models\Contracts\Page as Contract;
+use Z3d0X\FilamentFabricator\Models\Contracts\Page as Contract;
 
 class Page extends Model implements Contract
 {

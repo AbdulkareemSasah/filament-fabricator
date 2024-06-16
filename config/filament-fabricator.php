@@ -1,6 +1,6 @@
 <?php
 
-// config for Sasah/FilamentFabricator
+// config for Z3d0X/FilamentFabricator
 return [
     'routing' => [
         'enabled' => true,
@@ -33,9 +33,9 @@ return [
         \Illuminate\Routing\Middleware\SubstituteBindings::class,
     ],
 
-    'page-model' => \Sasah\FilamentFabricator\Models\Page::class,
+    'page-model' => \Z3d0X\FilamentFabricator\Models\Page::class,
 
-    'page-resource' => \Sasah\FilamentFabricator\Resources\PageResource::class,
+    'page-resource' => \Z3d0X\FilamentFabricator\Resources\PageResource::class,
 
     'enable-view-page' => false,
 

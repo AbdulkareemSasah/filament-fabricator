@@ -1,6 +1,6 @@
 <?php
 
-namespace Sasah\FilamentFabricator\Commands;
+namespace Z3d0X\FilamentFabricator\Commands;
 
 use Filament\Support\Commands\Concerns\CanManipulateFiles;
 use Illuminate\Console\Command;

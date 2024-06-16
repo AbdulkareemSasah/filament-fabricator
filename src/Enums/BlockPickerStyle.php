@@ -1,6 +1,6 @@
 <?php
 
-namespace Sasah\FilamentFabricator\Enums;
+namespace Z3d0X\FilamentFabricator\Enums;
 
 enum BlockPickerStyle
 {

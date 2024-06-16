@@ -1,6 +1,6 @@
 <?php
 
-namespace Sasah\FilamentFabricator;
+namespace Z3d0X\FilamentFabricator;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Route;
@@ -10,9 +10,9 @@ use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Symfony\Component\Finder\SplFileInfo;
-use Sasah\FilamentFabricator\Facades\FilamentFabricator;
-use Sasah\FilamentFabricator\Layouts\Layout;
-use Sasah\FilamentFabricator\PageBlocks\PageBlock;
+use Z3d0X\FilamentFabricator\Facades\FilamentFabricator;
+use Z3d0X\FilamentFabricator\Layouts\Layout;
+use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
 
 class FilamentFabricatorServiceProvider extends PackageServiceProvider
 {
@@ -34,7 +34,7 @@ class FilamentFabricatorServiceProvider extends PackageServiceProvider
                     ->publishConfigFile()
                     ->publishMigrations()
                     ->askToRunMigrations()
-                    ->askToStarRepoOnGitHub('Sasah/filament-fabricator');
+                    ->askToStarRepoOnGitHub('Z3d0X/filament-fabricator');
             });
     }
 
@@ -48,7 +48,7 @@ class FilamentFabricatorServiceProvider extends PackageServiceProvider
         $aliases = [];
 
         foreach ($commands as $command) {
-            $class = 'Sasah\\FilamentFabricator\\Commands\\Aliases\\' . class_basename($command);
+            $class = 'Z3d0X\\FilamentFabricator\\Commands\\Aliases\\' . class_basename($command);
 
             if (!class_exists($class)) {
                 continue;

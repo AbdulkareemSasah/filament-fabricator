@@ -1,9 +1,9 @@
 <?php
 
-namespace Sasah\FilamentFabricator\Resources\PageResource\Pages\Concerns;
+namespace Z3d0X\FilamentFabricator\Resources\PageResource\Pages\Concerns;
 
 use Pboivin\FilamentPeek\Pages\Concerns\HasPreviewModal as BaseHasPreviewModal;
-use Sasah\FilamentFabricator\Facades\FilamentFabricator;
+use Z3d0X\FilamentFabricator\Facades\FilamentFabricator;
 
 trait HasPreviewModal
 {

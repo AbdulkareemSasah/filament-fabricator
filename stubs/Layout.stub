@@ -2,7 +2,7 @@
 
 namespace {{ namespace }};
 
-use Sasah\FilamentFabricator\Layouts\Layout;
+use Z3d0X\FilamentFabricator\Layouts\Layout;
 
 class {{ class }} extends Layout
 {

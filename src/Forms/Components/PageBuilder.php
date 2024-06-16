@@ -1,11 +1,11 @@
 <?php
 
-namespace Sasah\FilamentFabricator\Forms\Components;
+namespace Z3d0X\FilamentFabricator\Forms\Components;
 
 use Filament\Forms\Components\Builder;
-use Sasah\FilamentFabricator\Enums\BlockPickerStyle;
-use Sasah\FilamentFabricator\Facades\FilamentFabricator;
-use Sasah\FilamentFabricator\FilamentFabricatorPlugin;
+use Z3d0X\FilamentFabricator\Enums\BlockPickerStyle;
+use Z3d0X\FilamentFabricator\Facades\FilamentFabricator;
+use Z3d0X\FilamentFabricator\FilamentFabricatorPlugin;
 
 class PageBuilder extends Builder
 {

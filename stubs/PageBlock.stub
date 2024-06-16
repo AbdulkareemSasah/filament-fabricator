@@ -3,7 +3,7 @@
 namespace {{ namespace }};
 
 use Filament\Forms\Components\Builder\Block;
-use Sasah\FilamentFabricator\PageBlocks\PageBlock;
+use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
 
 class {{ class }} extends PageBlock
 {

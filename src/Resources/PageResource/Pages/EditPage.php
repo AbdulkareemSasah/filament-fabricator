@@ -1,14 +1,14 @@
 <?php
 
-namespace Sasah\FilamentFabricator\Resources\PageResource\Pages;
+namespace Z3d0X\FilamentFabricator\Resources\PageResource\Pages;
 
 use Filament\Pages\Actions;
 use Filament\Pages\Actions\Action;
 use Filament\Resources\Pages\EditRecord;
 use Pboivin\FilamentPeek\Pages\Actions\PreviewAction;
-use Sasah\FilamentFabricator\Facades\FilamentFabricator;
-use Sasah\FilamentFabricator\Models\Contracts\Page as PageContract;
-use Sasah\FilamentFabricator\Resources\PageResource;
+use Z3d0X\FilamentFabricator\Facades\FilamentFabricator;
+use Z3d0X\FilamentFabricator\Models\Contracts\Page as PageContract;
+use Z3d0X\FilamentFabricator\Resources\PageResource;
 use Filament\Actions\LocaleSwitcher;
 
 

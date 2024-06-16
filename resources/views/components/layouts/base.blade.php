@@ -13,11 +13,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    @foreach (\Sasah\FilamentFabricator\Facades\FilamentFabricator::getMeta() as $tag)
+    @foreach (\Z3d0X\FilamentFabricator\Facades\FilamentFabricator::getMeta() as $tag)
         {{ $tag }}
     @endforeach
 
-    @if ($favicon = \Sasah\FilamentFabricator\Facades\FilamentFabricator::getFavicon())
+    @if ($favicon = \Z3d0X\FilamentFabricator\Facades\FilamentFabricator::getFavicon())
         <link rel="icon" href="{{ $favicon }}">
     @endif
 
@@ -33,7 +33,7 @@
     </style>
 
 
-    @foreach (\Sasah\FilamentFabricator\Facades\FilamentFabricator::getStyles() as $name => $path)
+    @foreach (\Z3d0X\FilamentFabricator\Facades\FilamentFabricator::getStyles() as $name => $path)
         @if (\Illuminate\Support\Str::of($path)->startsWith('<'))
             {!! $path !!}
         @else
@@ -51,7 +51,7 @@
 
     {{ \Filament\Support\Facades\FilamentView::renderHook('filament-fabricator::scripts.start') }}
 
-    @foreach (\Sasah\FilamentFabricator\Facades\FilamentFabricator::getScripts() as $name => $path)
+    @foreach (\Z3d0X\FilamentFabricator\Facades\FilamentFabricator::getScripts() as $name => $path)
         @if (\Illuminate\Support\Str::of($path)->startsWith('<'))
             {!! $path !!}
         @else

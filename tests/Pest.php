@@ -1,5 +1,5 @@
 <?php
 
-use Sasah\FilamentFabricator\Tests\TestCase;
+use Z3d0X\FilamentFabricator\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

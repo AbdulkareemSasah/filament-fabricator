@@ -1,15 +1,15 @@
 <?php
 
-namespace Sasah\FilamentFabricator;
+namespace Z3d0X\FilamentFabricator;
 
 use Closure;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
-use Sasah\FilamentFabricator\Layouts\Layout;
-use Sasah\FilamentFabricator\Models\Contracts\Page as PageContract;
-use Sasah\FilamentFabricator\Models\Page;
-use Sasah\FilamentFabricator\PageBlocks\PageBlock;
+use Z3d0X\FilamentFabricator\Layouts\Layout;
+use Z3d0X\FilamentFabricator\Models\Contracts\Page as PageContract;
+use Z3d0X\FilamentFabricator\Models\Page;
+use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
 
 class FilamentFabricatorManager
 {

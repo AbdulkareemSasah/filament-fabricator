@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Sasah\FilamentFabricator\Facades\FilamentFabricator;
-use Sasah\FilamentFabricator\Http\Controllers\PageController;
+use Z3d0X\FilamentFabricator\Facades\FilamentFabricator;
+use Z3d0X\FilamentFabricator\Http\Controllers\PageController;
 
 if (config('filament-fabricator.routing.enabled')) {
     Route::middleware(config('filament-fabricator.middleware') ?? [])
