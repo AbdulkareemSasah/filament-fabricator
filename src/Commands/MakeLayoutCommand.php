@@ -1,6 +1,6 @@
 <?php
 
-namespace Z3d0X\FilamentFabricator\Commands;
+namespace Sasah\FilamentFabricator\Commands;
 
 use Filament\Support\Commands\Concerns\CanManipulateFiles;
 use Illuminate\Console\Command;
@@ -63,7 +63,7 @@ class MakeLayoutCommand extends Command
 
         $files = [$path, $viewPath];
 
-        if (! $this->option('force') && $this->checkForCollision($files)) {
+        if (!$this->option('force') && $this->checkForCollision($files)) {
             return static::INVALID;
         }
 

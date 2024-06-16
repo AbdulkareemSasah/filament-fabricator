@@ -1,7 +1,7 @@
 ## Introduction
 
 <p align="center" class="filament-hidden">
-  <img alt="fabricator banner" src="https://raw.githubusercontent.com/z3d0x/filament-fabricator/2.x/art/banner.jpg" />
+  <img alt="fabricator banner" src="https://raw.githubusercontent.com/Sasah/filament-fabricator/2.x/art/banner.jpg" />
 </p>
 
 **What is Filament Fabricator?** Filament Fabricator is simply said a block-based page builder skeleton.  Filament Fabricator takes care of the `PageResource` & frontend routing, so you can focus on what really matters: your [Layouts](#layouts) & [Page Blocks](#page-blocks).
@@ -9,15 +9,15 @@
 
 ## Screenshots
 
-<img alt="fabricator-index" src="https://raw.githubusercontent.com/z3d0x/filament-fabricator/2.x/art/list-screenshot.png">
-<img alt="fabricator-edit-1" src="https://raw.githubusercontent.com/z3d0x/filament-fabricator/2.x/art/edit-screenshot-1.png">
-<img alt="fabricator-edit-2" src="https://raw.githubusercontent.com/z3d0x/filament-fabricator/2.x/art/edit-screenshot-2.png">
+<img alt="fabricator-index" src="https://raw.githubusercontent.com/Sasah/filament-fabricator/2.x/art/list-screenshot.png">
+<img alt="fabricator-edit-1" src="https://raw.githubusercontent.com/Sasah/filament-fabricator/2.x/art/edit-screenshot-1.png">
+<img alt="fabricator-edit-2" src="https://raw.githubusercontent.com/Sasah/filament-fabricator/2.x/art/edit-screenshot-2.png">
 
 ## Installation
 
 Once you have [Filament Panels](https://filamentphp.com/docs/3.x/panels/installation) configured. You can install this package via composer:
 ```bash
-composer require z3d0x/filament-fabricator
+composer require Sasah/filament-fabricator
 ```
 
 After that run the install command: (this will publish the config & migrations)
@@ -27,7 +27,7 @@ php artisan filament-fabricator:install
 Register a `FilamentFabricatorPlugin` instance in your Panel provider:
 
 ```php
-use Z3d0X\FilamentFabricator\FilamentFabricatorPlugin;
+use Sasah\FilamentFabricator\FilamentFabricatorPlugin;
 
 //..
 
@@ -61,7 +61,7 @@ php artisan filament-fabricator:layout DefaultLayout
 
 This will create the following Layout class:
 ```php
-use Z3d0X\FilamentFabricator\Layouts\Layout;
+use Sasah\FilamentFabricator\Layouts\Layout;
 
 class DefaultLayout extends Layout
 {
@@ -86,10 +86,10 @@ You may edit this layout blade file however you want, as long as you are using t
 
 ### Base Layouts
 
-You may noticed that layouts created are wrapped in a `filament-fabricator::layouts.base` component. This is the [Base Layout](https://github.com/Z3d0X/filament-fabricator/blob/main/resources/views/components/layouts/base.blade.php). You can use the following, in the `boot()` of a ServiceProvider, to inject additional data to the base layout:
+You may noticed that layouts created are wrapped in a `filament-fabricator::layouts.base` component. This is the [Base Layout](https://github.com/Sasah/filament-fabricator/blob/main/resources/views/components/layouts/base.blade.php). You can use the following, in the `boot()` of a ServiceProvider, to inject additional data to the base layout:
 
 ```php
-use Z3d0X\FilamentFabricator\Facades\FilamentFabricator;
+use Sasah\FilamentFabricator\Facades\FilamentFabricator;
 use Illuminate\Foundation\Vite;
 
 //Add custom tags (like `<meta>` & `<link>`)
@@ -137,7 +137,7 @@ php artisan filament-fabricator:block MyBlock
 This will create the following Page Block class (& its corresponding blade component view):
 ```php
 use Filament\Forms\Components\Builder\Block;
-use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
+use Sasah\FilamentFabricator\PageBlocks\PageBlock;
 
 class MyBlock extends PageBlock
 {
@@ -222,7 +222,7 @@ public static function mutateData(array $data): array
 
 Underneath the hood `PageBuilder` is just a Filament's [Builder](https://filamentphp.com/docs/3.x/forms/fields/builder) field. Like other filament fields this field also has methods that can be used to modify it. You may configure it like this:
 ```php
-use Z3d0X\FilamentFabricator\Forms\Components\PageBuilder;
+use Sasah\FilamentFabricator\Forms\Components\PageBuilder;
 
 PageBuilder::configureUsing(function (PageBuilder $builder) {
     $builder->collapsible(); //You can use any method supported by the Builder field
@@ -238,8 +238,8 @@ Currently there are two styles available:
 
 
 ```php
-use Z3d0X\FilamentFabricator\Enums\BlockPickerStyle;
-use Z3d0X\FilamentFabricator\Forms\Components\PageBuilder;
+use Sasah\FilamentFabricator\Enums\BlockPickerStyle;
+use Sasah\FilamentFabricator\Forms\Components\PageBuilder;
 
 PageBuilder::configureUsing(function (PageBuilder $builder) {
     $builder->blockPickerStyle(BlockPickerStyle::Modal);
@@ -249,8 +249,8 @@ PageBuilder::configureUsing(function (PageBuilder $builder) {
 an alternative one-liner way of changing block picker style is using `blockPickerStyle()` method when registering the `FilamentFabricatorPlugin` in your Panel provider:
 
 ```php
-use Z3d0X\FilamentFabricator\Enums\BlockPickerStyle;
-use Z3d0X\FilamentFabricator\FilamentFabricatorPlugin;
+use Sasah\FilamentFabricator\Enums\BlockPickerStyle;
+use Sasah\FilamentFabricator\FilamentFabricatorPlugin;
  
 //..
  
@@ -274,7 +274,7 @@ public function panel(Panel $panel): Panel
 
 You may use the following methods in the `boot()` of a ServiceProvider to customize the navigation item of `PageResource`
 ```php
-use Z3d0X\FilamentFabricator\Resources\PageResource;
+use Sasah\FilamentFabricator\Resources\PageResource;
 
 PageResource::navigationGroup('Blog');
 PageResource::navigationSort(1);
@@ -283,7 +283,7 @@ PageResource::navigationIcon('heroicon-o-cube');
 
 ### Authorization
 
-To enforce policies, after generating a policy, you would need to register `\Z3d0X\FilamentFabricator\Models\Page` to use that policy in the `AuthServiceProvider`.
+To enforce policies, after generating a policy, you would need to register `\Sasah\FilamentFabricator\Models\Page` to use that policy in the `AuthServiceProvider`.
 
 ```php
 <?php
@@ -292,7 +292,7 @@ namespace App\Providers;
 
 use App\Policies\PagePolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
-use Z3d0X\FilamentFabricator\Models\Page;
+use Sasah\FilamentFabricator\Models\Page;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -308,5 +308,5 @@ class AuthServiceProvider extends ServiceProvider
 ## Compatibility
 | Fabricator | Filament | PHP |
 |------|----------|--------|
-| [1.x](https://github.com/z3d0x/filament-fabricator/tree/1.x) | ^2.0 | ^8.0 |
-| [2.x](https://github.com/z3d0x/filament-fabricator/tree/2.x) | ^3.0 | ^8.1 |
+| [1.x](https://github.com/Sasah/filament-fabricator/tree/1.x) | ^2.0 | ^8.0 |
+| [2.x](https://github.com/Sasah/filament-fabricator/tree/2.x) | ^3.0 | ^8.1 |

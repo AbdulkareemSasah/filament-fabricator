@@ -1,9 +1,9 @@
 <?php
 
-namespace Z3d0X\FilamentFabricator\Resources\PageResource\Pages\Concerns;
+namespace Sasah\FilamentFabricator\Resources\PageResource\Pages\Concerns;
 
 use Pboivin\FilamentPeek\Pages\Concerns\HasPreviewModal as BaseHasPreviewModal;
-use Z3d0X\FilamentFabricator\Facades\FilamentFabricator;
+use Sasah\FilamentFabricator\Facades\FilamentFabricator;
 
 trait HasPreviewModal
 {
@@ -22,13 +22,13 @@ trait HasPreviewModal
     protected function mutatePreviewModalData($data): array
     {
         $layoutName = $this->data['layout'] ?? null;
-        if (! isset($layoutName)) {
+        if (!isset($layoutName)) {
             return [];
         }
 
         $layout = FilamentFabricator::getLayoutFromName($layoutName);
 
-        if (! isset($layout)) {
+        if (!isset($layout)) {
             throw new \Exception("Filament Fabricator: Layout \"{$layoutName}\" not found");
         }
 

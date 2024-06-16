@@ -1,6 +1,6 @@
 <?php
 
-namespace Z3d0X\FilamentFabricator\Tests;
+namespace Sasah\FilamentFabricator\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
@@ -10,7 +10,7 @@ use Filament\Support\SupportServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Z3d0X\FilamentFabricator\FilamentFabricatorServiceProvider;
+use Sasah\FilamentFabricator\FilamentFabricatorServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -19,7 +19,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Z3d0X\\FilamentFabricator\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
+            fn (string $modelName) => 'Sasah\\FilamentFabricator\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
         );
     }
 

@@ -1,16 +1,17 @@
 <?php
 
-namespace Z3d0X\FilamentFabricator\Resources\PageResource\Pages;
+namespace Sasah\FilamentFabricator\Resources\PageResource\Pages;
 
 use Filament\Pages\Actions;
 use Filament\Pages\Actions\Action;
 use Filament\Resources\Pages\ViewRecord;
-use Z3d0X\FilamentFabricator\Facades\FilamentFabricator;
-use Z3d0X\FilamentFabricator\Models\Contracts\Page as PageContract;
-use Z3d0X\FilamentFabricator\Resources\PageResource;
+use Sasah\FilamentFabricator\Facades\FilamentFabricator;
+use Sasah\FilamentFabricator\Models\Contracts\Page as PageContract;
+use Sasah\FilamentFabricator\Resources\PageResource;
 
 class ViewPage extends ViewRecord
 {
+    use ViewRecord\Concerns\Translatable;
     protected static string $resource = PageResource::class;
 
     public static function getResource(): string
@@ -22,7 +23,7 @@ class ViewPage extends ViewRecord
     {
         return [
             Actions\EditAction::make(),
-
+            Actions\LocaleSwitcher::make(),
             Action::make('visit')
                 ->label(__('filament-fabricator::page-resource.actions.visit'))
                 ->url(function () {

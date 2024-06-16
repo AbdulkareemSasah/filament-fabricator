@@ -1,6 +1,6 @@
 <?php
 
-namespace Z3d0X\FilamentFabricator;
+namespace Sasah\FilamentFabricator;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Route;
@@ -10,9 +10,9 @@ use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Symfony\Component\Finder\SplFileInfo;
-use Z3d0X\FilamentFabricator\Facades\FilamentFabricator;
-use Z3d0X\FilamentFabricator\Layouts\Layout;
-use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
+use Sasah\FilamentFabricator\Facades\FilamentFabricator;
+use Sasah\FilamentFabricator\Layouts\Layout;
+use Sasah\FilamentFabricator\PageBlocks\PageBlock;
 
 class FilamentFabricatorServiceProvider extends PackageServiceProvider
 {
@@ -34,7 +34,7 @@ class FilamentFabricatorServiceProvider extends PackageServiceProvider
                     ->publishConfigFile()
                     ->publishMigrations()
                     ->askToRunMigrations()
-                    ->askToStarRepoOnGitHub('z3d0x/filament-fabricator');
+                    ->askToStarRepoOnGitHub('Sasah/filament-fabricator');
             });
     }
 
@@ -48,9 +48,9 @@ class FilamentFabricatorServiceProvider extends PackageServiceProvider
         $aliases = [];
 
         foreach ($commands as $command) {
-            $class = 'Z3d0X\\FilamentFabricator\\Commands\\Aliases\\' . class_basename($command);
+            $class = 'Sasah\\FilamentFabricator\\Commands\\Aliases\\' . class_basename($command);
 
-            if (! class_exists($class)) {
+            if (!class_exists($class)) {
                 continue;
             }
 
@@ -108,7 +108,7 @@ class FilamentFabricatorServiceProvider extends PackageServiceProvider
 
         $filesystem = app(Filesystem::class);
 
-        if ((! $filesystem->exists($directory)) && (! Str::of($directory)->contains('*'))) {
+        if ((!$filesystem->exists($directory)) && (!Str::of($directory)->contains('*'))) {
             return;
         }
 
@@ -131,7 +131,7 @@ class FilamentFabricatorServiceProvider extends PackageServiceProvider
                         ->replace('*', $variableNamespace)
                         ->replace(['/', '.php'], ['\\', '']);
                 })
-                ->filter(fn (string $class): bool => is_subclass_of($class, $baseClass) && (! (new ReflectionClass($class))->isAbstract()))
+                ->filter(fn (string $class): bool => is_subclass_of($class, $baseClass) && (!(new ReflectionClass($class))->isAbstract()))
                 ->each(fn (string $class) => FilamentFabricator::registerComponent($class, $baseClass))
                 ->all(),
         );

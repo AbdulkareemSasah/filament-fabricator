@@ -5,7 +5,7 @@ use Filament\Support\SupportServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\Concerns\CreatesApplication;
 use Orchestra\Testbench\Foundation\Application;
-use Z3d0X\FilamentFabricator\FilamentFabricatorServiceProvider;
+use Sasah\FilamentFabricator\FilamentFabricatorServiceProvider;
 
 $basePathLocator = new class()
 {

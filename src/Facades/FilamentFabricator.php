@@ -1,9 +1,9 @@
 <?php
 
-namespace Z3d0X\FilamentFabricator\Facades;
+namespace Sasah\FilamentFabricator\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Z3d0X\FilamentFabricator\Models\Contracts\Page as PageContract;
+use Sasah\FilamentFabricator\Models\Contracts\Page as PageContract;
 
 /**
  * @method static void registerComponent(string $class, string $baseClass)
@@ -30,7 +30,7 @@ use Z3d0X\FilamentFabricator\Models\Contracts\Page as PageContract;
  * @method static array getPageUrls()
  * @method static ?string getPageUrlFromId(int $id, bool $prefixSlash = false)
  *
- * @see \Z3d0X\FilamentFabricator\FilamentFabricatorManager
+ * @see \Sasah\FilamentFabricator\FilamentFabricatorManager
  */
 class FilamentFabricator extends Facade
 {

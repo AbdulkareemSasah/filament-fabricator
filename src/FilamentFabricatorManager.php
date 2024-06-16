@@ -1,15 +1,15 @@
 <?php
 
-namespace Z3d0X\FilamentFabricator;
+namespace Sasah\FilamentFabricator;
 
 use Closure;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
-use Z3d0X\FilamentFabricator\Layouts\Layout;
-use Z3d0X\FilamentFabricator\Models\Contracts\Page as PageContract;
-use Z3d0X\FilamentFabricator\Models\Page;
-use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
+use Sasah\FilamentFabricator\Layouts\Layout;
+use Sasah\FilamentFabricator\Models\Contracts\Page as PageContract;
+use Sasah\FilamentFabricator\Models\Page;
+use Sasah\FilamentFabricator\PageBlocks\PageBlock;
 
 class FilamentFabricatorManager
 {
@@ -61,7 +61,7 @@ class FilamentFabricatorManager
     /** @param  class-string  $layout */
     public function registerLayout(string $layout): void
     {
-        if (! is_subclass_of($layout, Layout::class)) {
+        if (!is_subclass_of($layout, Layout::class)) {
             throw new \InvalidArgumentException("{$layout} must extend " . Layout::class);
         }
 
@@ -71,7 +71,7 @@ class FilamentFabricatorManager
     /** @param  class-string  $pageBlock */
     public function registerPageBlock(string $pageBlock): void
     {
-        if (! is_subclass_of($pageBlock, PageBlock::class)) {
+        if (!is_subclass_of($pageBlock, PageBlock::class)) {
             throw new \InvalidArgumentException("{$pageBlock} must extend " . PageBlock::class);
         }
 

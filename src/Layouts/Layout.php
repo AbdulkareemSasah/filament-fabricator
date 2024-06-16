@@ -1,6 +1,6 @@
 <?php
 
-namespace Z3d0X\FilamentFabricator\Layouts;
+namespace Sasah\FilamentFabricator\Layouts;
 
 use Illuminate\Support\Str;
 

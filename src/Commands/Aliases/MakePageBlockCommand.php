@@ -1,8 +1,8 @@
 <?php
 
-namespace Z3d0X\FilamentFabricator\Commands\Aliases;
+namespace Sasah\FilamentFabricator\Commands\Aliases;
 
-use Z3d0X\FilamentFabricator\Commands;
+use Sasah\FilamentFabricator\Commands;
 
 /**
  * @deprecated

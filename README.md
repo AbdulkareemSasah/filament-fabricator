@@ -1,26 +1,26 @@
 # Block-Based Page Builder Skeleton for your Filament Apps
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/z3d0x/filament-fabricator.svg?style=for-the-badge)](https://packagist.org/packages/z3d0x/filament-fabricator)
-[![Total Downloads](https://img.shields.io/packagist/dt/z3d0x/filament-fabricator.svg?style=for-the-badge)](https://packagist.org/packages/z3d0x/filament-fabricator)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/Sasah/filament-fabricator.svg?style=for-the-badge)](https://packagist.org/packages/Sasah/filament-fabricator)
+[![Total Downloads](https://img.shields.io/packagist/dt/Sasah/filament-fabricator.svg?style=for-the-badge)](https://packagist.org/packages/Sasah/filament-fabricator)
 
 <p align="center">
-  <img alt="fabricator banner" src="https://raw.githubusercontent.com/z3d0x/filament-fabricator/2.x/art/banner.jpg" />
+  <img alt="fabricator banner" src="https://raw.githubusercontent.com/Sasah/filament-fabricator/2.x/art/banner.jpg" />
 </p>
 
-***What is Filament Fabricator?*** Filament Fabricator is simply said a block-based page builder skeleton. Filament Fabricator takes care of the PageResource & frontend routing, so you can focus on what really matters: your [Layouts](https://filamentphp.com/plugins/z3d0x-fabricator#layouts) & [Page Blocks](https://filamentphp.com/plugins/z3d0x-fabricator#page-blocks).
+***What is Filament Fabricator?*** Filament Fabricator is simply said a block-based page builder skeleton. Filament Fabricator takes care of the PageResource & frontend routing, so you can focus on what really matters: your [Layouts](https://filamentphp.com/plugins/Sasah-fabricator#layouts) & [Page Blocks](https://filamentphp.com/plugins/Sasah-fabricator#page-blocks).
 
 ## Compatibility
 | Fabricator | Filament | PHP |
 |------|----------|--------|
-| [1.x](https://github.com/z3d0x/filament-fabricator/tree/1.x) | ^2.0 | ^8.0 |
-| [2.x](https://github.com/z3d0x/filament-fabricator/tree/2.x) | ^3.0 | ^8.1 |
+| [1.x](https://github.com/Sasah/filament-fabricator/tree/1.x) | ^2.0 | ^8.0 |
+| [2.x](https://github.com/Sasah/filament-fabricator/tree/2.x) | ^3.0 | ^8.1 |
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require z3d0x/filament-fabricator
+composer require Sasah/filament-fabricator
 ```
 
 
@@ -32,7 +32,7 @@ php artisan filament-fabricator:install
 Register a `FilamentFabricatorPlugin` instance in your Panel provider:
 
 ```php
-use Z3d0X\FilamentFabricator\FilamentFabricatorPlugin;
+use Sasah\FilamentFabricator\FilamentFabricatorPlugin;
 
 //..
 
@@ -54,13 +54,13 @@ php artisan filament:assets
 
 ## Documentation
 
-Documentation can be viewed at: https://filamentphp.com/plugins/z3d0x-fabricator
+Documentation can be viewed at: https://filamentphp.com/plugins/Sasah-fabricator
 
 ## Screenshots
 
-<img alt="fabricator-index" src="https://raw.githubusercontent.com/z3d0x/filament-fabricator/2.x/art/list-screenshot.png">
-<img alt="fabricator-edit-1" src="https://raw.githubusercontent.com/z3d0x/filament-fabricator/2.x/art/edit-screenshot-1.png">
-<img alt="fabricator-edit-2" src="https://raw.githubusercontent.com/z3d0x/filament-fabricator/2.x/art/edit-screenshot-2.png">
+<img alt="fabricator-index" src="https://raw.githubusercontent.com/Sasah/filament-fabricator/2.x/art/list-screenshot.png">
+<img alt="fabricator-edit-1" src="https://raw.githubusercontent.com/Sasah/filament-fabricator/2.x/art/edit-screenshot-1.png">
+<img alt="fabricator-edit-2" src="https://raw.githubusercontent.com/Sasah/filament-fabricator/2.x/art/edit-screenshot-2.png">
 
 ## Changelog
 
@@ -76,7 +76,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Ziyaan Hassan](https://github.com/Z3d0X)
+- [Ziyaan Hassan](https://github.com/Sasah)
 - [Patrick Boivin](https://github.com/pboivin) - Filament Peek
 - [All Contributors](../../contributors)
 

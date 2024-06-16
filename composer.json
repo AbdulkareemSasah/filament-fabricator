@@ -1,12 +1,12 @@
 {
-    "name": "z3d0x/filament-fabricator",
+    "name": "Sasah/filament-fabricator",
     "description": "Block-Based Page Builder Skeleton for your Filament Apps",
     "keywords": [
-        "Z3d0X",
+        "Sasah",
         "laravel",
         "filament-fabricator"
     ],
-    "homepage": "https://github.com/z3d0x/filament-fabricator",
+    "homepage": "https://github.com/Sasah/filament-fabricator",
     "license": "MIT",
     "authors": [
         {
@@ -37,13 +37,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Z3d0X\\FilamentFabricator\\": "src",
-            "Z3d0X\\FilamentFabricator\\Database\\Factories\\": "database/factories"
+            "Sasah\\FilamentFabricator\\": "src",
+            "Sasah\\FilamentFabricator\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Z3d0X\\FilamentFabricator\\Tests\\": "tests"
+            "Sasah\\FilamentFabricator\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -66,10 +66,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Z3d0X\\FilamentFabricator\\FilamentFabricatorServiceProvider"
+                "Sasah\\FilamentFabricator\\FilamentFabricatorServiceProvider"
             ],
             "aliases": {
-                "FilamentFabricator": "Z3d0X\\FilamentFabricator\\Facades\\FilamentFabricator"
+                "FilamentFabricator": "Sasah\\FilamentFabricator\\Facades\\FilamentFabricator"
             }
         }
     },

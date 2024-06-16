@@ -1,6 +1,6 @@
 <?php
 
-namespace Z3d0X\FilamentFabricator\PageBlocks;
+namespace Sasah\FilamentFabricator\PageBlocks;
 
 use Filament\Forms\Components\Builder\Block;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Z3d0X\FilamentFabricator\Resources;
+namespace Sasah\FilamentFabricator\Resources;
 
 use Closure;
 use Filament\Forms\Components\Actions\Action as FormAction;
@@ -19,20 +19,23 @@ use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
+use Filament\Resources\Concerns\Translatable;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rules\Unique;
-use Z3d0X\FilamentFabricator\Facades\FilamentFabricator;
-use Z3d0X\FilamentFabricator\Forms\Components\PageBuilder;
-use Z3d0X\FilamentFabricator\Models\Contracts\Page as PageContract;
-use Z3d0X\FilamentFabricator\Resources\PageResource\Pages;
+use Sasah\FilamentFabricator\Facades\FilamentFabricator;
+use Sasah\FilamentFabricator\Forms\Components\PageBuilder;
+use Sasah\FilamentFabricator\Models\Contracts\Page as PageContract;
+use Sasah\FilamentFabricator\Resources\PageResource\Pages;
 
 class PageResource extends Resource
 {
+    use Translatable;
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
     protected static ?string $recordTitleAttribute = 'title';
+
 
     public static function getModel(): string
     {
@@ -70,7 +73,7 @@ class PageResource extends Resource
                                 TextInput::make('title')
                                     ->label(__('filament-fabricator::page-resource.labels.title'))
                                     ->afterStateUpdated(function (Get $get, Set $set, ?string $state, ?PageContract $record) {
-                                        if (! $get('is_slug_changed_manually') && filled($state) && blank($record)) {
+                                        if (!$get('is_slug_changed_manually') && filled($state) && blank($record)) {
                                             $set('slug', Str::slug($state, language: config('app.locale', 'en')));
                                         }
                                     })

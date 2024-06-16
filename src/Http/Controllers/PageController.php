@@ -1,11 +1,11 @@
 <?php
 
-namespace Z3d0X\FilamentFabricator\Http\Controllers;
+namespace Sasah\FilamentFabricator\Http\Controllers;
 
 use Illuminate\Support\Facades\Blade;
-use Z3d0X\FilamentFabricator\Facades\FilamentFabricator;
-use Z3d0X\FilamentFabricator\Layouts\Layout;
-use Z3d0X\FilamentFabricator\Models\Contracts\Page;
+use Sasah\FilamentFabricator\Facades\FilamentFabricator;
+use Sasah\FilamentFabricator\Layouts\Layout;
+use Sasah\FilamentFabricator\Models\Contracts\Page;
 
 class PageController
 {
@@ -26,7 +26,7 @@ class PageController
         /** @var ?class-string<Layout> $layout */
         $layout = FilamentFabricator::getLayoutFromName($filamentFabricatorPage?->layout);
 
-        if (! isset($layout)) {
+        if (!isset($layout)) {
             throw new \Exception("Filament Fabricator: Layout \"{$filamentFabricatorPage->layout}\" not found");
         }
 
